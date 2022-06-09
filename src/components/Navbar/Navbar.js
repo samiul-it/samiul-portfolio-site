@@ -1,23 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
       <div>
         <div class="navbar bg-base-100">
           <div class="flex-1">
-            <a class="btn btn-ghost normal-case text-xl">Samiul</a>
+            <Link to="/" class="btn btn-ghost normal-case text-2xl">Samiul</Link>
           </div>
           <div class="flex-none">
             <ul class="menu menu-horizontal p-0">
               <li>
-                <a>Skills</a>
+                <Link to="/skills">Skills</Link>
               </li>
               <li tabIndex="0">
-            
-                <a>Projects</a>
+                <Link to="/projects">Projects</Link>
               </li>
               <li>
-                  <a href="">Contact Me</a>
+                <Link to="/contact">Contact Me</Link>
               </li>
             </ul>
           </div>

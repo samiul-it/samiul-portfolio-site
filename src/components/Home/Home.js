@@ -6,9 +6,7 @@ import Projects from '../Projects/Projects';
 const Home = () => {
     return (
         <div>
-            <Navbar></Navbar>
             <Homepage></Homepage>
-            <Projects></Projects>
         </div>
     );
 };

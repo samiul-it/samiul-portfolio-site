@@ -1,16 +1,13 @@
 import React from "react";
-import Background from "../../Images/Black Blue Geometric Tips Business Linkedin Banner.png";
+import Background from "../../Images/samiul.png";
 import Typewriter from "typewriter-effect";
+
 
 const Homepage = () => {
   return (
     <div>
       <div
         class="hero min-h-screen"
-        style={{
-          background: `url(${Background})`,
-          backgroundRepeat: "no-repeat",
-        }}
       >
         <div class="hero-overlay bg-opacity-80"></div>
         <div class="hero-content text-center text-neutral-content ">
