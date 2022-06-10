@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import Fade from "react-reveal/Fade";
 
 const Contact = () => {
   const form = useRef();
@@ -26,54 +27,57 @@ const Contact = () => {
   };
   return (
     <div>
-      <div class="hero min-h-screen bg-base-200">
-        <div class="hero-content flex-col lg:flex-row-reverse">
-          <div class="text-center lg:text-left">
-            <h1 class="text-5xl font-bold">Ask me anything...</h1>
-          </div>
-          <form ref={form} onSubmit={sendEmail}>
-            <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-              <div class="card-body">
-                <div class="form-control">
-                  <label class="label">
-                    <span class="label-text">Your Name</span>
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="your name"
-                    name="user_name"
-                    class="input input-bordered"
-                  />
-                  <label class="label">
-                    <span class="label-text">Email</span>
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="email"
-                    name="user_email"
-                    class="input input-bordered"
-                  />
-                </div>
-                <div class="form-control">
-                  <label class="label">
-                    <span class="label-text">Message</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="message"
-                    class="input input-bordered"
-                  />
-                </div>
-                <div class="form-control mt-6">
-                  <button value="Send" class="btn btn-primary">
-                    Send Message
-                  </button>
+      <div data-aos="slide-left" data-aos-delay="50">
+        <div className="hero min-h-screen bg-base-200">
+          <div className="hero-content flex-col lg:flex-row-reverse">
+            <div className="text-center lg:text-left">
+              <h1 className="text-5xl font-bold">Ask me anything...</h1>
+            </div>
+            <form ref={form} onSubmit={sendEmail}>
+              <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                <div className="card-body">
+                  <div className="form-control">
+                    <label className="label">
+                      <span className="label-text">Your Name</span>
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="your name"
+                      name="user_name"
+                      className="input input-bordered"
+                    />
+                    <label className="label">
+                      <span className="label-text">Email</span>
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="email"
+                      name="user_email"
+                      className="input input-bordered"
+                    />
+                  </div>
+                  <div className="form-control">
+                    <label className="label">
+                      <span className="label-text">Message</span>
+                    </label>
+                    <input
+                      type="text"
+                      name="message"
+                      className="input input-bordered"
+                    />
+                  </div>
+                  <div className="form-control mt-6">
+                    <button value="Send" className="btn btn-primary">
+                      Send Message
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
-      </div>
+        </div>
+      
     </div>
   );
 };

@@ -7,16 +7,30 @@ import Navbar from './components/Navbar/Navbar';
 import NotFound from './components/NotFound/NotFound';
 import Projects from './components/Projects/Projects';
 
+import Skills from './components/Skills/Skills';
+import AboutMe from './components/AboutMe/AboutMe';
+import Blogs from './components/Blogs/Blogs';
+import "aos/dist/aos.css";
+import AOS from "aos";
+
 function App() {
+  AOS.init();
+  
   return (
     <div className="">
-      <Navbar></Navbar>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path='*' element={<NotFound></NotFound>}></Route>
-      </Routes>
+      
+      
+        <Navbar></Navbar>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/about" element={<AboutMe />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="*" element={<NotFound></NotFound>}></Route>
+        </Routes>
+      
     </div>
   );
 }
