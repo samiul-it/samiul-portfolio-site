@@ -12,6 +12,8 @@ import AboutMe from './components/AboutMe/AboutMe';
 import Blogs from './components/Blogs/Blogs';
 import "aos/dist/aos.css";
 import AOS from "aos";
+import ProjectDetail from './components/ProjectDetail/ProjectDetail';
+import Footer from './components/Footer/Footer';
 
 function App() {
   AOS.init();
@@ -28,8 +30,11 @@ function App() {
           <Route path="/skills" element={<Skills />} />
           <Route path="/about" element={<AboutMe />} />
           <Route path="/blogs" element={<Blogs />} />
+          <Route path="/projects/:id" element={<ProjectDetail />} />
           <Route path="*" element={<NotFound></NotFound>}></Route>
         </Routes>
+
+        <Footer></Footer>
       
     </div>
   );
