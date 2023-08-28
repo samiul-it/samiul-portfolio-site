@@ -5,7 +5,7 @@ const useProjects = () => {
     const [projects,setProjects]=useState([]);
 
     useEffect(()=>{
-        fetch("https://samiul1998.github.io/projects-json/projects.json")
+        fetch("https://samiul-it.github.io/projects-json/projects.json")
           .then((res) => res.json())
           .then((data) => {
             setProjectsLoading(false);
