@@ -4,26 +4,18 @@ import project2 from "../../Images/project2.png";
 import project3 from "../../Images/project3.png";
 import { FaExternalLinkAlt, FaCode } from "react-icons/fa";
 import useProjects from "./../../hooks/useProjects";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import Project from "../Project/Project";
 
-
-
 const Projects = () => {
-  const [projects,projectsLoading] = useProjects();
+  const [projects, projectsLoading] = useProjects();
   const navigate = useNavigate();
 
-  // console.log(projects);
+  console.log(projects);
 
-
-
-  if(projectsLoading){
+  if (projectsLoading) {
     return <p className="text-center"> Loading....</p>;
   }
-
-  
-
-  
 
   // console.log(projects);
 
@@ -36,8 +28,13 @@ const Projects = () => {
       >
         Top Projects
       </h1>
-      <div data-aos="slide-right" data-aos-delay="50">
-        <div className="sm:-m-0  lg:flex  ">
+      <div>
+        <div
+          data-aos="fade-right"
+          data-aos-offset="350"
+          data-aos-easing="ease-in-sine"
+          className="grid lg:grid-cols-3 lg:gap-3 mb-5   "
+        >
           {projects.map((project) => (
             <Project key={project.id} project={project}></Project>
           ))}

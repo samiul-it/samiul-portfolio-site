@@ -15,66 +15,80 @@ const ProjectDetail = () => {
   console.log(projectInfo[0].img2);
 
   return (
-    <div className="hero-content">
-      <div className="card w-96  bg-base-100 shadow-xl sm:m-0 lg:m-10">
-        <div className="">
-          <figure data-aos="fade-right" className="m-4 ">
-            <img src={projectInfo[0].img1} alt="Album" />
-          </figure>
-          <figure data-aos="fade-left" className="m-4">
-            <img src={projectInfo[0].img2} alt="Album" />
-          </figure>
-          <figure data-aos="fade-right" className="m-4">
-            <img src={projectInfo[0].img3} alt="Album" />
-          </figure>
-        </div>
-        <div data-aos="zoom-in" className="card-body">
-          <h2 className="card-title">{projectInfo[0].project_name}</h2>
-          <p>{projectInfo[0].project_description}</p>
-          <div className="card-actions justify-end">
-            <div
-              data-aos="flip-up"
-              className="badge badge-outline hover:bg-orange-700"
-            >
-              <a href={projectInfo[0].live}>
-                <FaExternalLinkAlt />
-              </a>
-            </div>
-            <div
-              data-aos="flip-up"
-              className="badge badge-outline hover:bg-orange-700"
-            >
-              <a href={projectInfo[0].github_c}>
-                <FaCode></FaCode>
-              </a>
-            </div>
-            <div
-              data-aos="flip-up"
-              className="badge badge-outline hover:bg-orange-700"
-            >
-              <a href={projectInfo[0].github_s}>
-                {" "}
-                <FaCode></FaCode>
-              </a>
-            </div>
-            <div data-aos="zoom-out" className="alert alert-success shadow-lg">
-              <div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="stroke-current flex-shrink-0 h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-
-                <span>{projectInfo[0].technologies}</span>
+    <div>
+      <div className="hero min-h-screen bg-base-200">
+        <div className="hero-content flex-col lg:flex-row-reverse">
+          <div className="lg:max-w-2xl rounded-lg shadow-2xl">
+            <div className="carousel w-full">
+              <div id="slide1" className="carousel-item relative w-full">
+                <img src={projectInfo[0].img1} className="w-full" />
+                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                  <a
+                    href="#slide4"
+                    className="btn bg-transparent rounded-none hover:bg-rose-600 hover:text-white"
+                  >
+                    ❮
+                  </a>
+                  <a
+                    href="#slide2"
+                    className="btn bg-transparent rounded-none  hover:bg-rose-600 hover:text-white"
+                  >
+                    ❯
+                  </a>
+                </div>
               </div>
+              <div id="slide2" className="carousel-item relative w-full">
+                <img src={projectInfo[0].img2} className="w-full" />
+                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                  <a
+                    href="#slide1"
+                    className="btn bg-transparent rounded-none  hover:bg-rose-600 hover:text-white"
+                  >
+                    ❮
+                  </a>
+                  <a
+                    href="#slide3"
+                    className="btn bg-transparent rounded-none  hover:bg-rose-600 hover:text-white"
+                  >
+                    ❯
+                  </a>
+                </div>
+              </div>
+              <div id="slide3" className="carousel-item relative w-full">
+                <img src={projectInfo[0].img3} className="w-full" />
+                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                  <a
+                    href="#slide2"
+                    className="btn bg-transparent rounded-none  hover:bg-rose-600 hover:text-white"
+                  >
+                    ❮
+                  </a>
+                  <a
+                    href="#slide1"
+                    className="btn bg-transparent rounded-none  hover:bg-rose-600 hover:text-white"
+                  >
+                    ❯
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h1 className="text-4xl lg:text-5xl font-bold">
+              {projectInfo[0].project_name}
+            </h1>
+            <p className="py-6">{projectInfo[0].project_description}</p>
+            <div class="inline-flex">
+              <button class="bg-rose-700 hover:bg-rose-400 text-gray-800 font-bold py-2 px-4 rounded-l">
+                <a href={projectInfo[0]?.live}> Live Site </a>
+              </button>
+              <button class="bg-rose-800 hover:bg-rose-400 text-gray-800 font-bold py-2 px-4 ">
+                <a href={projectInfo[0]?.github_c}> Client Code </a>
+              </button>
+              <button class="bg-rose-500 hover:bg-rose-400 text-gray-800 font-bold py-2 px-4 rounded-r">
+                <a href={projectInfo[0]?.github_s}>Server Code</a>
+              </button>
             </div>
           </div>
         </div>
