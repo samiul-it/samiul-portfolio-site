@@ -74,10 +74,10 @@ const Skills = () => {
               <div className="card lg:w-96 bg-slate-100 hover:bg-slate-100 hover:opacity-90 shadow-xl shadow-cyan-500/50">
                 <figure>
                   <img
+                    className="transition duration-150 ease-in-out hover:scale-110"
                     data-aos="fade-up"
                     data-aos-duration="3000"
                     src={technology?.image}
-                    className="transition duration-150 ease-in-out hover:scale-110"
                     alt="Shoes"
                   />
                 </figure>

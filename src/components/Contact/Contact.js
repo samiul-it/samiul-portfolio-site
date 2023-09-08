@@ -23,7 +23,7 @@ const Contact = () => {
           console.log(error.text);
         }
       );
-      e.target.reset();
+    e.target.reset();
   };
   return (
     <div>
@@ -44,7 +44,7 @@ const Contact = () => {
                       type="text"
                       placeholder="your name"
                       name="user_name"
-                      className="input input-bordered"
+                      className="input input-bordered rounded-none"
                     />
                     <label className="label">
                       <span className="label-text">Email</span>
@@ -53,7 +53,7 @@ const Contact = () => {
                       type="text"
                       placeholder="email"
                       name="user_email"
-                      className="input input-bordered"
+                      className="input input-bordered rounded-none"
                     />
                   </div>
                   <div className="form-control">
@@ -63,11 +63,14 @@ const Contact = () => {
                     <input
                       type="text"
                       name="message"
-                      className="input input-bordered"
+                      className="input input-bordered rounded-none"
                     />
                   </div>
                   <div className="form-control mt-6">
-                    <button value="Send" className="btn btn-primary">
+                    <button
+                      value="Send"
+                      className="btn bg-rose-700 rounded-none"
+                    >
                       Send Message
                     </button>
                   </div>
@@ -76,8 +79,7 @@ const Contact = () => {
             </form>
           </div>
         </div>
-        </div>
-      
+      </div>
     </div>
   );
 };

@@ -2,16 +2,24 @@ import React from "react";
 import samiul from "../../Images/samiul.png";
 import { FaLinkedin, FaGithub, FaPhoneSquareAlt } from "react-icons/fa";
 
-
 const AboutMe = () => {
-  
   return (
     <div>
-      <div data-aos="slide-down" data-aos-delay="50">
+      <div>
         <div className="hero min-h-screen bg-base-200">
           <div className="hero-content flex-col lg:flex-row">
-            <img src={samiul} className="max-w-sm rounded-lg shadow-2xl" />
-            <div>
+            <img
+              data-aos="fade-right"
+              data-aos-offset="350"
+              data-aos-easing="ease-in-sine"
+              src={samiul}
+              className="max-w-sm rounded-lg shadow-2xl"
+            />
+            <div
+              data-aos="fade-left"
+              data-aos-offset="350"
+              data-aos-easing="ease-in-sine"
+            >
               <h1 className="text-5xl font-bold">Samiul Islam Talukdar</h1>
               <p className="py-6">
                 I am a React JS developer, I recently completed my graduation on
