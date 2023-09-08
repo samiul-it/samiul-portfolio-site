@@ -10,7 +10,7 @@ const Project = ({ project }) => {
   };
 
   return (
-    <div className="card w-96 bg-base-100  rounded-none shadow-2xl shadow-rose-500/50 hover:shadow-rose-700/50 sm:m-0 lg:m-10 transition duration-380 ease-in-out hover:scale-110 ">
+    <div className="card  lg:w-96 bg-base-100  rounded-none shadow-2xl shadow-rose-500/50 hover:shadow-rose-700/50 sm:m-0 lg:m-10 transition duration-380 ease-in-out hover:scale-110 ">
       <figure>
         <img
           data-aos="fade-up"
