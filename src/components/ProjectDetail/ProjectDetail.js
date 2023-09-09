@@ -20,12 +20,12 @@ const ProjectDetail = () => {
     <div>
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="lg:max-w-2xl rounded-lg shadow-2xl">
+          <div className="max-w-md lg:max-w-2xl rounded-lg shadow-2xl">
             <div
               data-aos="fade-left"
               data-aos-offset="350"
               data-aos-easing="ease-in-sine"
-              className="carousel w-full "
+              className="carousel  w-full "
             >
               <div id="slide1" className="carousel-item relative w-full">
                 <img src={projectInfo[0].img1} className="w-full" />
@@ -90,7 +90,7 @@ const ProjectDetail = () => {
               {projectInfo[0].project_name}
             </h1>
             <p className="py-6">{projectInfo[0].project_description}</p>
-            <div className="inline-flex mb-4 rounded-none">
+            <div className="lg:inline-flex mb-4 rounded-none">
               {projectInfo[0]?.technologies.map((usedTechnology, index) => (
                 <div
                   key={index}
@@ -98,7 +98,7 @@ const ProjectDetail = () => {
                   data-aos-duration="3000"
                   className=" badge badge-lg py-4 rounded-none bg-rose-600 text-white"
                 >
-                   {usedTechnology?.techName}
+                  {usedTechnology?.techName}
                 </div>
               ))}
             </div>
