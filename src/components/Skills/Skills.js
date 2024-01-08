@@ -36,6 +36,10 @@ const technologies = [
   },
   {
     name: "",
+    image: "https://miro.medium.com/v2/resize:fit:1358/0*e6zH9C7BStm2hshr",
+  },
+  {
+    name: "",
     image:
       "https://findlogovector.com/wp-content/uploads/2022/04/mongodb-logo-vector-2022.png",
   },
@@ -49,7 +53,13 @@ const technologies = [
   },
   {
     name: "",
-    image: "https://www.vectorlogo.zone/logos/github/github-ar21.png",
+    image:
+      "https://bomma.s3.ap-south-1.amazonaws.com/bootstrap/bootstrap_syllabus.png",
+  },
+  {
+    name: "",
+    image:
+      "https://blog.b2bstack.com.br/wp-content/uploads/2022/09/GitHub.jpeg",
   },
   {
     name: "",
@@ -60,7 +70,14 @@ const technologies = [
 
 const Skills = () => {
   return (
-    <div>
+    <div className="bg-[#1c1f28]">
+      <h1
+        data-aos="fade-up"
+        data-aos-anchor-placement="bottom-bottom"
+        className="text-5xl text-center font-bold mb-5 "
+      >
+        Skills
+      </h1>
       <div className="hero min-h-screen">
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
@@ -71,7 +88,7 @@ const Skills = () => {
             className="grid lg:grid-cols-3 gap-4 lg:gap-5"
           >
             {technologies?.map((technology, index) => (
-              <div className="card lg:w-96 bg-slate-100 hover:bg-slate-100 hover:opacity-90 shadow-xl shadow-cyan-500/50">
+              <div className="card lg:w-96 rounded-none bg-slate-100 hover:bg-slate-100 hover:opacity-90 shadow-xl shadow-cyan-500/50">
                 <figure>
                   <img
                     className="transition duration-150 ease-in-out hover:scale-110"

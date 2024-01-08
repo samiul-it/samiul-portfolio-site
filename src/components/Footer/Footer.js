@@ -3,7 +3,7 @@ import { FaLinkedinIn, FaGithub, FaYoutube, FaFacebook } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="footer footer-center p-10 bg-rose-600 text-primary-content">
+    <footer className="footer footer-center p-10 bg-[#d51d4d] text-primary-content">
       <aside>
         <img
           width="150"
